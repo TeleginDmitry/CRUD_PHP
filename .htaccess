@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Убедитесь, что запрос не направлен к реальному файлу или директории
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Перенаправьте запросы к конкретному посту
+RewriteRule ^posts(/([0-9]*))?/?$ modules/posts/posts.controller.php?id=$2 [QSA,L]

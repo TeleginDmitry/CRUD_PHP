@@ -1,0 +1,10 @@
+# Исключить Docker файлы из контекста сборки
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Можно также исключить другие ненужные файлы или директории
+.git
+.gitignore
+node_modules/
+*.log
